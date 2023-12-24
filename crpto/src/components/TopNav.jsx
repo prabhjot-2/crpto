@@ -1,13 +1,14 @@
-import { Container, Flex, Heading , Menu , Button, MenuItem, MenuButton , MenuList, HStack } from "@chakra-ui/react";
-
+import { Container, Flex, Box, Heading , Menu , Button, MenuItem, MenuButton , MenuList, HStack, Icon } from "@chakra-ui/react";
+import {FaUserTie} from "react-icons/fa";
 const TopNav = () =>{
     return(
-        <HStack boxShadow="xl" h="16" justify="space-between" px={32}>
-            <Heading> Dashboard</Heading>
+        <Box>
+            <HStack maxW="60rem" boxShadow="xl" h="16" justify="space-between" px={32}>
+            <Heading fontSize="28px"> Dashboard</Heading>
 
             <Menu>
               <MenuButton as={Button} >
-                Actions
+                <Icon as={FaUserTie}/>
               </MenuButton>
               <MenuList>
                 <MenuItem>Download</MenuItem>
@@ -18,6 +19,7 @@ const TopNav = () =>{
               </MenuList>
             </Menu>
         </HStack>
+        </Box>
     );
 };
 
