@@ -3,19 +3,17 @@ import {FaUserTie} from "react-icons/fa";
 const TopNav = () =>{
     return(
         <Box>
-            <HStack maxW="60rem" boxShadow="xl" h="16" justify="space-between" px={32}>
-            <Heading fontSize="28px"> Dashboard</Heading>
+            <HStack maxW="80rem" boxShadow="xl" h="16" justify="space-between" px={32}>
+            <Heading fontWeight="medium" fontSize="28px"> Dashboard</Heading>
 
             <Menu>
               <MenuButton as={Button} >
-                <Icon as={FaUserTie}/>
+                <Icon as={FaUserTie} fonstSize="24px"/>
               </MenuButton>
               <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
+                <MenuItem>Logout</MenuItem>
+                <MenuItem>Support</MenuItem>
+    
               </MenuList>
             </Menu>
         </HStack>
