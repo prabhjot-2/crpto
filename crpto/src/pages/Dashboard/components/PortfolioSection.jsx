@@ -4,8 +4,43 @@ import { AiOutlineArrowDown, AiOutlineArrowUp, AiOutlineInfoCircle } from "react
 
 const PortfolioSection =()=>{
     return (
-      <HStack justify="space-between" bg="white" borderRadius="xl" p="6" >
-      <HStack spacing="16">
+      <HStack 
+        justify="space-between" 
+        bg="white" 
+        borderRadius="xl" 
+        p="6" 
+        align={{
+            base:"flex-start",
+            xl:"center",
+        }}
+        flexDir={{
+            base:"column",
+            xl:"row",
+        }}
+        spacing={
+            {
+                base:4,
+                xl:0,
+            }
+        }
+        >
+      <HStack 
+        spacing={
+            {
+                base:0,
+                xl:16,
+            }
+        }
+        align={{
+            base:"flex-start",
+            xl:"center",
+        }}
+        flexDir={{
+            base:"column",
+            xl:"row",
+        }}
+
+      >
 
       
         <Stack>
@@ -19,7 +54,16 @@ const PortfolioSection =()=>{
           <HStack color="black.80">
             <Text fontSize="sm">Wallet Balance</Text>
           </HStack>
-          <HStack spacing={4}>
+          <HStack spacing={2}
+            align={{
+                base:"flex-start",
+                sm:"center",
+            }}
+            flexDir={{
+                base:"column",
+                sm:"row",
+            }}
+            >
             <HStack>
               <Text textStyle="h2" fontWeight={"medium"}> 22.34567781</Text>
               <Tag colorScheme="gray" fontWeight={"medium"}> BTC</Tag>
