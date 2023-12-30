@@ -3,6 +3,7 @@ import DashboardLayout from "../../components/DashboardLayout";
 import PortfolioSection from "./components/PortfolioSection";
 import PriceSection from "./components/PriceSection";
 import Transactions from "./components/Transactions";
+import InfoCard from "./components/InfoCard";
 
 const Dashboard =()=>{
     return (
@@ -15,7 +16,12 @@ const Dashboard =()=>{
             gap="6"
             
         >
-            <GridItem colSpan={2}>
+            <GridItem 
+                colSpan={{
+                    base:1,
+                    xl:2,
+                }}
+            >
                 <PortfolioSection/>
             </GridItem>
 
@@ -25,6 +31,22 @@ const Dashboard =()=>{
 
             <GridItem colSpan={1}>
                 <Transactions/>
+            </GridItem>
+            <GridItem colSpan={1}>
+                <InfoCard imgUrl="/dot_bg.svg "
+                    text="Learn more about Loans - Keep yout Bitcoin, access it's value without
+                sell it"
+                    tagText="Loan"
+                    inverted={false}
+                />
+
+            </GridItem>
+            <GridItem colSpan={1}>
+                <InfoCard imgUrl="/grid_bg.svg "
+                    text="Learn more about our real estate, mortgage, and corporate account services"
+                    tagText="Contact"
+                    inverted={true}
+                />
             </GridItem>
         </Grid>
         </DashboardLayout>
